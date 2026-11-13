@@ -1,0 +1,24 @@
+[package]
+name = "coro"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.92"
+description = "Run the official Claude Code CLI on several of your own Claude subscriptions, with shared sessions and quota-aware account choice"
+license = "MIT"
+repository = "https://github.com/Yuuuuuuuuhvt/coro"
+readme = "README.md"
+keywords = ["claude", "cli", "launcher"]
+categories = ["command-line-utilities"]
+publish = false
+
+[[bin]]
+name = "coro"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2"
+serde_json = { version = "1", features = ["preserve_order"] }
+unicode-normalization = "0.1"
+
+[profile.release]
+strip = true
